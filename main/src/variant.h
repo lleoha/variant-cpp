@@ -50,7 +50,7 @@ struct variant_helper;
 }
 
 template<typename... Ts>
-class Variant : detail::cast_helper<Variant<Ts...>, Ts...> {
+class Variant : public detail::cast_helper<Variant<Ts...>, Ts...> {
 public:
     Variant() : type(nullptr) {
     }
